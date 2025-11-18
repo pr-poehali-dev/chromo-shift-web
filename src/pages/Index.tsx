@@ -32,9 +32,9 @@ const Index = () => {
 
   const features = [
     {
-      icon: 'Sparkles',
-      title: 'Магия порталов',
-      description: 'Открывайте врата между мирами и исследуйте бесконечные измерения'
+      icon: 'Layers',
+      title: 'Магический лифт',
+      description: 'Путешествуйте между измерениями с помощью таинственного лифта'
     },
     {
       icon: 'Zap',
@@ -54,10 +54,10 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 glow-purple flex items-center justify-center">
-                <Icon name="Sparkles" size={20} className="text-white" />
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center">
+                <Icon name="Layers" size={20} className="text-white" />
               </div>
-              <span className="text-2xl font-bold text-glow">Chromo Shift</span>
+              <span className="text-2xl font-bold">Chromo Shift</span>
             </div>
             <div className="hidden md:flex gap-6">
               {['home', 'gameplay', 'gallery', 'download'].map((section) => (
@@ -75,7 +75,7 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <Button className="glow-purple">
+            <Button className="bg-primary hover:bg-primary/90">
               <Icon name="Download" size={16} className="mr-2" />
               Скачать
             </Button>
@@ -86,14 +86,14 @@ const Index = () => {
       <section id="home" className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
           <div className="animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 text-glow">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6">
               Chromo Shift
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto">
-              Путешествуйте сквозь измерения, открывайте порталы в неизведанные миры и раскрывайте тайны мультивселенной
+              Войдите в таинственный лифт и путешествуйте сквозь измерения в неизведанные миры
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" className="glow-purple text-lg px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                 <Icon name="Play" size={20} className="mr-2" />
                 Начать игру
               </Button>
@@ -107,9 +107,9 @@ const Index = () => {
           <div className="mt-16 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-pink-500/20 blur-3xl animate-pulse-glow"></div>
             <img
-              src="https://cdn.poehali.dev/projects/ab22a301-c328-47d0-a533-8fba8c1a89e2/files/57bb9b82-1f2b-4f12-9784-1b04b1ef4af1.jpg"
-              alt="Chromo Shift Portal"
-              className="relative rounded-2xl shadow-2xl glow-purple w-full max-w-4xl mx-auto animate-scale-in"
+              src="https://cdn.poehali.dev/projects/ab22a301-c328-47d0-a533-8fba8c1a89e2/files/badbbc59-b156-4854-8406-3531a8ba7265.jpg"
+              alt="Chromo Shift Elevator"
+              className="relative rounded-2xl shadow-2xl w-full max-w-4xl mx-auto animate-scale-in"
             />
           </div>
         </div>
@@ -117,7 +117,7 @@ const Index = () => {
 
       <section id="gameplay" className="py-20 px-4 bg-gradient-to-b from-purple-950/10 to-background">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-4 text-glow">Геймплей</h2>
+          <h2 className="text-5xl font-bold text-center mb-4">Геймплей</h2>
           <p className="text-center text-foreground/70 mb-16 text-lg max-w-2xl mx-auto">
             Инновационная механика перемещения между мирами
           </p>
@@ -126,11 +126,11 @@ const Index = () => {
             {features.map((feature, index) => (
               <Card 
                 key={index} 
-                className="bg-card/50 backdrop-blur border-purple-500/30 hover:border-purple-500/60 transition-all hover:glow-purple animate-fade-in"
+                className="bg-card/50 backdrop-blur border-purple-500/30 hover:border-purple-500/60 transition-all animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-6 glow-blue">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-6">
                     <Icon name={feature.icon as any} size={32} className="text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
@@ -142,32 +142,32 @@ const Index = () => {
 
           <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
             <div className="animate-fade-in">
-              <h3 className="text-3xl font-bold mb-4">Овладейте порталами</h3>
+              <h3 className="text-3xl font-bold mb-4">Путешествуйте на лифте</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <Icon name="Check" size={24} className="text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Создавайте порталы на любых поверхностях</span>
+                  <span className="text-foreground/80">Нажимайте кнопки лифта для перемещения между мирами</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Icon name="Check" size={24} className="text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Комбинируйте способности разных миров</span>
+                  <span className="text-foreground/80">Открывайте новые этажи и измерения</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Icon name="Check" size={24} className="text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Решайте головоломки с помощью физики порталов</span>
+                  <span className="text-foreground/80">Решайте головоломки для доступа к секретным уровням</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Icon name="Check" size={24} className="text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">Исследуйте секретные локации между измерениями</span>
+                  <span className="text-foreground/80">Каждый этаж — новое измерение с уникальными правилами</span>
                 </li>
               </ul>
             </div>
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-2xl"></div>
               <img
-                src="https://cdn.poehali.dev/projects/ab22a301-c328-47d0-a533-8fba8c1a89e2/files/a2372442-f010-4ff6-bb8b-21b273755c6d.jpg"
-                alt="Gameplay"
-                className="relative rounded-xl shadow-xl glow-blue"
+                src="https://cdn.poehali.dev/files/e3834ee4-aeff-4f8a-974e-c736dfc3a637.png"
+                alt="Elevator Gameplay"
+                className="relative rounded-xl shadow-xl"
               />
             </div>
           </div>
@@ -176,7 +176,7 @@ const Index = () => {
 
       <section id="gallery" className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-4 text-glow">Галерея миров</h2>
+          <h2 className="text-5xl font-bold text-center mb-4">Галерея миров</h2>
           <p className="text-center text-foreground/70 mb-16 text-lg">
             Откройте для себя уникальные измерения
           </p>
@@ -185,7 +185,7 @@ const Index = () => {
             {worlds.map((world, index) => (
               <Card 
                 key={index}
-                className="overflow-hidden bg-card/50 backdrop-blur border-purple-500/30 hover:border-purple-500/60 transition-all hover:glow-purple group animate-fade-in"
+                className="overflow-hidden bg-card/50 backdrop-blur border-purple-500/30 hover:border-purple-500/60 transition-all group animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -209,7 +209,7 @@ const Index = () => {
       <section id="download" className="py-20 px-4 bg-gradient-to-b from-background to-purple-950/20">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-5xl font-bold mb-6 text-glow animate-fade-in">
+            <h2 className="text-5xl font-bold mb-6 animate-fade-in">
               Готовы начать путешествие?
             </h2>
             <p className="text-xl text-foreground/80 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -217,17 +217,13 @@ const Index = () => {
             </p>
             
             <div className="flex gap-4 justify-center flex-wrap mb-12 animate-scale-in" style={{ animationDelay: '0.4s' }}>
-              <Button size="lg" className="glow-purple text-lg px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                 <Icon name="MonitorPlay" size={20} className="mr-2" />
                 Windows
               </Button>
-              <Button size="lg" className="glow-blue text-lg px-8">
+              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-lg px-8">
                 <Icon name="Laptop" size={20} className="mr-2" />
                 macOS
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 border-purple-500/50 hover:bg-purple-500/10">
-                <Icon name="Gamepad2" size={20} className="mr-2" />
-                PlayStation / Xbox
               </Button>
             </div>
 
@@ -252,8 +248,8 @@ const Index = () => {
       <footer className="py-12 px-4 border-t border-purple-500/20">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 glow-purple flex items-center justify-center">
-              <Icon name="Sparkles" size={16} className="text-white" />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center">
+              <Icon name="Layers" size={16} className="text-white" />
             </div>
             <span className="text-xl font-bold">Chromo Shift</span>
           </div>
